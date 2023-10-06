@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  php-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: tail -f /dev/null
