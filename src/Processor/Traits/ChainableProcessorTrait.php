@@ -17,9 +17,7 @@ trait ChainableProcessorTrait
 
     public function log(LogEntry $log): void
     {
-        if ($log->level->value >= $this->getLogLevel()->value) {
-            parent::log($log);
-        }
+        parent::log($log);
 
         $this->callNext($log);
     }

@@ -18,14 +18,14 @@ $logger->setLogLevel(LogLevel::Warning);
 
 $logger->log("This should not be logged", LogLevel::Debug);
 $logger->log("This should not be logged", LogLevel::Info);
-$logger->log("This is should be logged as an error message", LogLevel::Error);
+$logger->log("This should be logged as an error message", LogLevel::Error);
 
 $logger->setLogLevel(LogLevel::Error);
 
 $logger->log("This should not be logged", LogLevel::Debug);
 $logger->log("This should not be logged", LogLevel::Info);
 $logger->log("This should not be logged as warning", LogLevel::Warning);
-$logger->log("This is should be logged as an error message", LogLevel::Error, ['with' => 'value']);
+$logger->log("This should be logged as an error message", LogLevel::Error, ['with' => 'value']);
 
 
 $logger->setTargetLogLevel('file', LogLevel::Warning);
@@ -33,4 +33,4 @@ $logger->setTargetLogLevel('file', LogLevel::Warning);
 $logger->log("This should not be logged", LogLevel::Debug);
 $logger->log("This should not be logged", LogLevel::Info);
 $logger->log("This should be logged", LogLevel::Warning);
-$logger->log("This is should be logged as an error message", LogLevel::Error, ['x' => 'y']);
+$logger->log("This should be logged as an error message", LogLevel::Error, ['x' => 'y']);

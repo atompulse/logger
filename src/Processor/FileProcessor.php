@@ -27,7 +27,9 @@ class FileProcessor implements LogProcessorInterface
 
     public function log(LogEntry $log): void
     {
-        $this->writeLog($log);
+        if ($log->level->value >= $this->logLevel->value) {
+            $this->writeLog($log);
+        }
     }
 
     private function writeLog(LogEntry $log)

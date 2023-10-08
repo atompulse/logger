@@ -1,21 +1,24 @@
 {
-    "name": "atompulse/logger",
-    "description": "A Simple Logger",
-    "type": "library",
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Atompulse\\Logger\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Petru Cojocar"
-        }
-    ],
-    "require-dev": {
-        "codeception/codeception": "^5.0",
-        "codeception/module-phpbrowser": "*",
-        "codeception/module-asserts": "*"
+  "name": "atompulse/logger",
+  "description": "A Simple Logger",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Atompulse\\Logger\\": "src/"
     }
+  },
+  "authors": [
+    {
+      "name": "Petru Cojocar"
+    }
+  ],
+  "require": {
+    "php": "^8.0"
+  },
+  "require-dev": {
+    "codeception/codeception": "^5.0",
+    "codeception/module-phpbrowser": "*",
+    "codeception/module-asserts": "*"
+  }
 }

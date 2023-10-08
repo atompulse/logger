@@ -20,6 +20,8 @@ class ConsoleProcessor implements LogProcessorInterface
 
     public function log(LogEntry $log): void
     {
-        echo $this->formatLog($log) . PHP_EOL;
+        if ($log->level->value >= $this->logLevel->value) {
+            echo $this->formatLog($log) . PHP_EOL;
+        }
     }
 }
